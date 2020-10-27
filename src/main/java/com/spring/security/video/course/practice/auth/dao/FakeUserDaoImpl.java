@@ -39,7 +39,7 @@ public class FakeUserDaoImpl implements UserDao {
                 ),
                 new User(
                         "linda",
-                        passwordEncoder.encode("password"),
+                        passwordEncoder.encode("password123"),
                         ADMIN.getGrantedAuthorities(),
                         true,
                         true,
@@ -56,7 +56,6 @@ public class FakeUserDaoImpl implements UserDao {
                         true
                 )
         );
-
         return Users;
     }
 }
