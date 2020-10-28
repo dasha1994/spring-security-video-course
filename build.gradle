@@ -16,12 +16,15 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.google.guava:guava:30.0-jre'
+	compile 'org.springframework.boot:spring-boot-starter-thymeleaf:2.3.4.RELEASE'
+	compile 'io.jsonwebtoken:jjwt-api:0.11.2'
+	runtime 'io.jsonwebtoken:jjwt-impl:0.11.2',
+			'io.jsonwebtoken:jjwt-jackson:0.11.2' // or 'io.jsonwebtoken:jjwt-gson:0.11.2' for gson
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	testImplementation 'org.springframework.security:spring-security-test'
-	compile 'org.springframework.boot:spring-boot-starter-thymeleaf:2.3.4.RELEASE'
 }
 
 test {
